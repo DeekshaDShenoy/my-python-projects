@@ -1,0 +1,46 @@
+import winsound
+q1="1.What is the capital of India? "
+q2="2.What is the capital of Afghanistan? "
+q3="3.What is the capital of Hungary? "
+q4="4.What is the capital of UK? "
+q5="5.What is the capital of USA? "
+q6="6.What is the capital of Bahrain? "
+q7="7.What is the capital of Canada? "
+q8="8.What is the capital of Iraq? "
+q9="9.What is the capital of Japan? "
+q10="10.What is the capital of Singapore? "
+answers={q1:"new delhi",q2:"kabul",q3:"budapest",q4:"london",q5:"washington",
+         q6:"manama",q7:"ottawa",q8:"baghdad",q9:"tokyo",q10:"singapore"}
+name=input("Please enter your name: ")
+print("Hello "+name+" ,Welcome to the Quizz!")
+print()
+print('''Note: * Please enter the updated names of the capital cities
+      * No negative markings
+      * On every wrong answer,a beep sound will be generated
+      * Ensure the spellings of the answers you write''') 
+print()
+print("Let us begin with the quiz!!")
+print()
+print("----------------------QUIZZ QUESTIONS---------------------")
+print()
+score=0
+for i in answers:
+    print(i)
+    ans=input("Please enter your answer: ")
+    if ans.lower()==answers[i]:
+        print("Correct answer,you got a point!")
+        score=score+1
+    else:
+        print("Wrong answer")
+        winsound.Beep(1000,800)
+        score=score+0
+    print()
+if(score>=8):
+    print("Congratulations!!Your final score is: ",score)
+    print("You seem to have a good General Knowledge!Keep it building!")
+else:
+    print("Your score is ",score)
+    print("Please try once again to excel!")
+
+
+
